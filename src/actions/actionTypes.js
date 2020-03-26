@@ -1,0 +1,5 @@
+export const START_UI_LOADER = 'START_UI_LOADER';
+export const STOP_UI_LOADER = 'STOP_UI_LOADER';
+
+export const START_LONG_LOADER = 'START_LONG_LOADER';
+export const STOP_LONG_LOADER = 'STOP_LONG_LOADER';
