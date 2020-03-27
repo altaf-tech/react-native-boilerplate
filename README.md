@@ -11,7 +11,7 @@ A react native boilerplate with react navigation and redux integrated
   
   ```yarn install```
  
-  ```cd ios && pod install & cd..```
+  ```cd ios && pod install && cd..```
   
 ## Run Application
 
