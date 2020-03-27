@@ -17,7 +17,7 @@ A react native boilerplate with react navigation and redux integrated
 
 * On iOS:
 
-  ```react-native run-android```
+  ```react-native run-ios```
 
 * On Android:
 
