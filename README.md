@@ -29,3 +29,8 @@ A react native boilerplate with react navigation v5, vector icons and redux inte
 - On Android:
 
   `react-native run-android`
+
+
+## App Screens
+
+<img src="https://raw.githubusercontent.com/altaf-tech/react-native-boilerplate/master/assets/home-screen.png" width="200"> <img src="https://raw.githubusercontent.com/altaf-tech/react-native-boilerplate/master/assets/detail-screen.png" width="200">
