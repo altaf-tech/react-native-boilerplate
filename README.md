@@ -1,31 +1,31 @@
 # react-native-boilerplate
-A react native boilerplate with react navigation 5 and redux integrated
 
+A react native boilerplate with react navigation v5, vector icons and redux integrated
 
 # Getting Started
-* Clone this repo
 
-  ```git clone https://github.com/altaf-tech/react-native-boilerplate```
+- Clone this repo
 
-* Go to project's root directory
+  `git clone https://github.com/altaf-tech/react-native-boilerplate`
 
-* Rename your project using [React Native Rename](https://www.npmjs.com/package/react-native-rename)
+- Go to project's root directory
 
-  ```react-native-rename <MyApp>```
+- Rename your project using [React Native Rename](https://www.npmjs.com/package/react-native-rename)
 
-* Install dependencies
+  `react-native-rename <MyApp>`
 
-  ```yarn install```
- 
-  ```cd ios && pod install && cd ..```
-  
+- Install dependencies
+
+  `yarn install`
+
+  `cd ios && pod install && cd ..`
+
 ## Run Application
 
-* On iOS:
+- On iOS:
 
-  ```react-native run-ios```
+  `react-native run-ios`
 
-* On Android:
+- On Android:
 
-  ```react-native run-android```
-
+  `react-native run-android`

@@ -22,14 +22,6 @@ function Detail(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.wrapper}>
-            <View style={styles.menu}>
-              <Icon name="angle-left" size={20} color="#333" />
-              <Button
-                title="Back to Home"
-                onPress={() => navigation.goBack()}
-              />
-            </View>
-
             <Text style={{fontSize: 30}}>Hello, Detail!</Text>
           </View>
         </ScrollView>
@@ -46,6 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height - 200,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   menu: {
     marginTop: 50,

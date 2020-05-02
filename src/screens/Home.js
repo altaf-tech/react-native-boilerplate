@@ -7,6 +7,7 @@ import {
   ScrollView,
   View,
   Text,
+  Image,
   StatusBar,
   Dimensions,
 } from 'react-native';
@@ -25,15 +26,12 @@ function Home(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.wrapper}>
-            <View style={styles.menu}>
-              <Icon name="navicon" size={20} color="#333" />
-              <Button
-                title="Open Drawer"
-                onPress={() => navigation.toggleDrawer()}
-              />
-            </View>
+            <Image
+              style={styles.tinyLogo}
+              source={require('../../assets/images/heart.png')}
+            />
 
-            <Text style={{fontSize: 30, marginTop: 100}}>Hello, Home!</Text>
+            <Text style={{fontSize: 30, marginTop: 100}}>Welcome!</Text>
             <Button
               title="Go to Details"
               onPress={() => navigation.navigate('Details')}
@@ -53,14 +51,9 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height - 200,
     alignItems: 'center',
-  },
-  menu: {
-    marginTop: 50,
-    height: 100,
-    flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
   },
+  tinyLogo: {width: 60, height: 60},
 });
 
 export default Home;

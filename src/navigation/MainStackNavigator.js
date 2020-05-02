@@ -7,8 +7,8 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 
-import {View, Text, StyleSheet} from 'react-native';
-
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import Icon from '../components/Icon';
 import HomeScreen from '../screens/Home';
 import DetailsScreen from '../screens/Details';
 
@@ -18,23 +18,11 @@ const Drawer = createDrawerNavigator();
 function DrawerContent(props) {
   const {navigation} = props.navigation;
   return (
-    <View
-      style={{
-        flex: 1,
-      }}>
-      <View
-        style={{
-          justifyContent: 'flex-end',
-          padding: 15,
-          height: 150,
-          backgroundColor: '#f1f1f1',
-          zIndex: 1,
-        }}>
-        <Text style={{fontWeight: 'bold', fontSize: 16}}>Altaf Hussain</Text>
+    <View style={styles.drawerContent}>
+      <View style={styles.profile}>
+        <Text style={styles.name}>Altaf Hussain</Text>
       </View>
-      <DrawerContentScrollView
-        {...props}
-        style={{backgroundColor: '#ffffff', marginTop: -40}}>
+      <DrawerContentScrollView {...props} style={styles.drawerSection}>
         <View>
           <DrawerItem
             label="Home"
@@ -55,6 +43,7 @@ function RootNavigator() {
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{
+        headerBackTitleVisible: false,
         headerStyle: {
           backgroundColor: '#f4511e',
         },
@@ -66,11 +55,19 @@ function RootNavigator() {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
-        options={{
+        options={({navigation, route}) => ({
           headerStyle: {
             backgroundColor: '#f4511e',
           },
-        }}
+          headerLeft: () => (
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() => navigation.toggleDrawer()}
+              style={{paddingLeft: 10, paddingRight: 10, width: 100}}>
+              <Icon name="navicon" size={22} color="#fff" />
+            </TouchableOpacity>
+          ),
+        })}
       />
       <Stack.Screen
         name="Details"
@@ -96,11 +93,18 @@ export default function MainStackNavigator() {
   );
 }
 
-// const styles = StyleSheet.create({
-//   drawerContent: {
-//     flex: 1,
-//   },
-//   drawerSection: {
-//     marginTop: 15,
-//   },
-// });
+const styles = StyleSheet.create({
+  drawerContent: {
+    flex: 1,
+  },
+  drawerSection: {backgroundColor: '#ffffff', marginTop: -20},
+
+  profile: {
+    justifyContent: 'flex-end',
+    padding: 15,
+    height: 150,
+    backgroundColor: '#f1f1f1',
+    zIndex: 1,
+  },
+  name: {fontWeight: 'bold', fontSize: 16},
+});
